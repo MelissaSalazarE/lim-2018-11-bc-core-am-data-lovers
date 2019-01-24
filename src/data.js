@@ -1,8 +1,11 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
-const example = () => {
-  return 'example';
+const mostrarPokemon = (data) => {
+  let arrayMostrar = [];
+  for (let i = 0; i < data.length; i++) {
+    arrayMostrar.push({ name: data[i].name, img: data[i].img, type: data[i].type}); 
+  }
+  return arrayMostrar;
 };
 
-window.example = example;
+window.pokemon = {
+mostrarPokemon
+};
