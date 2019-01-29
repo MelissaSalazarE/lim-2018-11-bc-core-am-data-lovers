@@ -1,45 +1,35 @@
 <!DOCTYPE html>
-<html>
-  <head>
+
+<html lang = "es">
+
+<head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <h1>POKEMON GO</h1>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <div> Tipos de POKEMON
-  <ul>
-    <li>
-      <a href="">Hierba</a>
-    </li>
-    <li>
-      <a href="">Veneno</a>
-    </li>
-    <li>
-      <a href="">Fuego</a>
-    </li>
-    <li>
-      <a href="">Hielo</a>
-    </li>
-    <li>
-      <a href="">Volandor</a>
-    </li>
-    <li>
-      <a href="">Psíquico</a>
-    </li>
-    <li>
-      <a href="">Agua</a>
-    </li>
-  </ul>
-</div>
-<section>
-  <h2>LISTA DE TODOS LOS POKEMONES</h2>
-  <div id="container-list" class="container">
-  </div>
-</section>
-  <body>
-    <div id="root"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+ 
+    <section class="header">
+        
+        <div class="group">
+            <a href="" class="boton_1">Ordena aquí tus Pokemones alfabeticamente</a>
+            <select class="select" id="orden-pokemon" onchange="ordenarPokemon()">
+                <option value="Az">de A a Z</option>
+                <option value="Za">de Z a A</option>
+            </select>
+        </div>
+       
+    <section>
+        <h2>Lista de todos los POKEMONES</h2>
+        <div id="container-list" class="container">
+        </div>
+    </section>
+
     <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
-  </body>
+</body>
+
 </html>

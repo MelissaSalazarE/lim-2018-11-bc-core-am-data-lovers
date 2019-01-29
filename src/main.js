@@ -1,20 +1,29 @@
-const containerList = document.getElementById('container-list');
-const arrayPokemon = POKEMON.pokemon;
-const arrayMostrado = pokemon.mostrarPokemon(arrayPokemon);
 
-const crearPlataforma = (data) => {
-let plataforma = '';
-data.forEach((data) => {
-let cartilla = `
-      <div class = "card-link">
-      <label class="name"> ${ data.name }</label>
-      <img class="image" src="${ data.img }" />
-      <h4>*Tipo*</h4>
-      <label class="type">${ data.type }</label>
-      </div>
-      `;
-plataforma += cartilla;
-});
-containerList.innerHTML = plataforma;
+const containerList = document.getElementById('container-list');
+const ordenPokemon = document.getElementById('orden-pokemon');
+
+const arrayPokemon = POKEMON.pokemon;
+
+const arrayMostrado = pokemon.mostrarPokemones(arrayPokemon);
+
+const crearPlantilla = (data) => {
+  let plantilla = '';
+  data.forEach((data) => {
+    let carta = `
+    <div class = "card-link">
+    <label class="name">${ data.name }</label>
+    <img class="image" src="${ data.img }" />
+    <label class="name" src="${ data.type}" /label>
+    </div>
+    `;
+    plantilla += carta;
+  });
+  containerList.innerHTML = plantilla;
 };
-crearPlataforma(arrayMostrado);
+crearPlantilla(arrayMostrado);
+
+
+const ordenarPokemon = () => {
+  const arrayOrdenado = pokemon.ordenarPorNombre(arrayPokemon, ordenPokemon.value);
+  crearPlantilla(arrayOrdenado);
+};
