@@ -5,24 +5,60 @@
 <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
+    <h1>POKEMON GO </h1>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
- 
-    <section class="header">
         
+    <section class="header">
         <div class="group">
-            <a href="" class="boton_1">Ordena aquí tus Pokemones alfabeticamente</a>
             <select class="select" id="orden-pokemon" onchange="ordenarPokemon()">
+                <option value="">Ordena aquí tus Pokemones alfabeticamente</option>
                 <option value="Az">de A a Z</option>
                 <option value="Za">de Z a A</option>
             </select>
+            <select class="seleccionar" id="tipo-pokemon" onchange = "filtrarTipo()">
+                <option value="Selected">Selecciona tipo pokemon</option>
+                <option value="Water">Agua</option>
+                <option value="Grass">Planta</option>
+                <option value="Bug">Bicho</option>
+                <option value="Dragon">Dragon</option>
+                <option value="Electric">Electrico</option>
+                <option value="Ice">Hielo</option>
+                <option value="Normal">Normal</option>
+                <option value="Rock">Roca</option>
+                <option value="Ground">Tierra</option>
+                <option value="Ghost">Fantasma</option>
+                <option value="Poison">Veneno</option>
+                <option value="Flying">Volador</option>
+                <option value="Fighting">Luchador</option>
+                <option value="Fire">Fuego</option>
+              </select>
         </div>
-       
+      </section>
+      
+    <select class="seleccionar" id="debilidad-pokemon" onchange = "filtrarDebilidad()">
+        <option value="Selected">Selecciona tipo de debilidad</option>
+        <option value="Water">Agua</option>
+        <option value="Grass">Planta</option>
+        <option value="Bug">Bicho</option>
+        <option value="Dragon">Dragon</option>
+        <option value="Electric">Electrico</option>
+        <option value="Ice">Hielo</option>
+        <option value="Normal">Normal</option>
+        <option value="Rock">Roca</option>
+        <option value="Ground">Tierra</option>
+        <option value="Ghost">Fantasma</option>
+        <option value="Poison">Veneno</option>
+        <option value="Flying">Volador</option>
+        <option value="Fighting">Luchador</option>
+        <option value="Fire">Fuego</option>
+      </select>
+
     <section>
-        <h2>Lista de todos los POKEMONES</h2>
+      <h2>LISTA DE TODOS LOS POKEMONES</h2>
         <div id="container-list" class="container">
         </div>
     </section>

@@ -1,17 +1,16 @@
 
 body {
-    background-image: url(https://andro4all.com/files/2016/07/capturar-pokemon-legendarios-640x480.jpg);
+    background-image: url(https://www.alfabetajuega.com/abj_public_files/multimedia/imagenes/201511/127011.alfabetajuega-pokemon-wallpapers-2-071115.jpg);
     background-attachment: fixed;
     background-repeat: round;
     text-align: center;
     opacity: 70px;
+    color: aliceblue;
 }
 
-.logo{
-    width: 400px;
-    height: 300%;
-    border-top: 4px dotted blue;
-    border-top: double;
+.header{
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 .container {
     width: 100%;
@@ -27,9 +26,11 @@ body {
     margin-bottom: 20px;
     padding-top: 20px;
     text-align: center;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
 }
 
-.boton_1{
+.seleccionar{
     text-decoration: none;
     padding: 3px;
     padding-left: 10px;
@@ -38,11 +39,12 @@ body {
     font-weight: 300;
     font-size: 25px;
     font-style: italic;
-    color:black;
-    background-color: #99b9e2;
+    color: black;
+    background-color: #92dcee;
     border-radius: 15px;
     border: 3px double #1e06f8;
-  }
+    float: right;
+}
 .select{
     text-decoration: none;
     padding: 3px;
@@ -53,13 +55,23 @@ body {
     font-size: 25px;
     font-style: italic;
     color: black;
-    background-color: #99b9e2;
+    background-color: #92dcee;
     border-radius: 15px;
     border: 3px double #1e06f8;
+    float: left;
     
 }
 @media (max-width: 750px) {
     .group {
         font-size: 15px;
     }
+}
+
+@-webkit-keyframes mymove {
+    from {background-color: rgba(199, 188, 188, 0.952);}
+    to {background-color: rgb(31, 31, 71);}
+}
+@keyframes mymove {
+    from {background-color:  rgba(199, 188, 188, 0.952);}
+    to {background-color: rgb(31, 31, 71);}
 }
