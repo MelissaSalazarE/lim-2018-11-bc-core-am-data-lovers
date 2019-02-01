@@ -5,16 +5,11 @@ const ordenPokemon = document.getElementById('orden-pokemon');
 
 const tipoPokemon = document.getElementById('tipo-pokemon');
 
-const debilidadPokemon = document.getElementById('debilidad-pokemon');
-
 const arrayPokemon = POKEMON.pokemon;
 
 const arrayMostrado = pokemon.mostrarPokemones(arrayPokemon);
 
-
-
-
-//muestra todos los pokemones
+// muestra todos los pokemones //
 
 const crearPlantilla = (data) => {
   let plantilla = '';
@@ -32,23 +27,22 @@ const crearPlantilla = (data) => {
 };
 crearPlantilla(arrayMostrado);
 
-//la funcion para el ordenado alfabeticamente
+// la funcion para el ordenado alfabeticamente //
+
+/* eslint-disable no-unused-vars */
 
 const ordenarPokemon = () => {
   const arrayOrdenado = pokemon.ordenarPorNombre(arrayPokemon, ordenPokemon.value);
   crearPlantilla(arrayOrdenado);
 };
+/* eslint-enable no-unused-vars */
 
-//filtar por tipo
+// filtar por tipo //
 
-const  filtrarTipo  = () => {
-    const  arrayFiltrado  =  pokemon.filtrarPokemones (arrayPokemon, tipoPokemon . value );
-    crearPlantilla (arrayFiltrado);
-    };
+/* eslint-disable no-unused-vars */
 
- // filtar por debilidad de pokemon
- 
- const filtrarDebilidad = () => {
-     const arrayFiltrard = pokemon.filtrarDebilidad (arrayPokemon, debilidadPokemon.value);
-     crearPlantilla (arrayFiltrard);
-    };
+const filtrarTipo = () => {
+  const arrayFiltrado = pokemon.filtrarPokemones(arrayPokemon, tipoPokemon.value);
+  crearPlantilla(arrayFiltrado);
+};
+/* eslint-enable no-unused-vars */

@@ -5,7 +5,8 @@ const mostrarPokemones = (data) => {
   }
   return arrayMostrar;
 };
-//la función es para ordenar alfabeticamente 
+
+// la función es para ordenar alfabeticamente //
 
 const ordenarPorNombre = (data, tipo) => {
   let arrayOrdenar = [];
@@ -21,15 +22,15 @@ const ordenarPorNombre = (data, tipo) => {
     }
     return 0;
   });
-  if (tipo === 'Az'){
+  if (tipo === 'Az') {
     return arrayOrdenar;
   }
-  if (tipo === 'Za'){
+  if (tipo === 'Za') {
     return arrayOrdenar.reverse();
   }
 };
 
-//filtar por tipo
+// filtar por tipo //
 
 const filtrarPokemones = (data, tipo) => {
   let arrayFiltrar = [];
@@ -43,23 +44,10 @@ const filtrarPokemones = (data, tipo) => {
     });
   return arrayFiltrar;
 };
-// filtrar por debilidad y crear la funcion contar
 
-const filtrarPorDebilidad = (data, tipo) => {
-  let arrayFiltrarDeb = [];
-  arrayFiltrarDeb = data.filter((elemento) => {
-    for (let i = 0; i < elemento.weaknesses.length; i++) {
-     if (elemento.weaknesses[i] === tipo) {
-       return 1;
-     } 
-    }
-  });
-  return arrayFiltrarDeb;
-};
 
 window.pokemon = {
   mostrarPokemones,
   ordenarPorNombre,
   filtrarPokemones,
-  filtrarPorDebilidad,
 };
