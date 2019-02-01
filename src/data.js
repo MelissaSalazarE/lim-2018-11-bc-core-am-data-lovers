@@ -45,6 +45,8 @@ const filtrarPokemones = (data, tipo) => {
   return arrayFiltrar;
 };
 
+// funcion estadistica //
+
 
 window.pokemon = {
   mostrarPokemones,

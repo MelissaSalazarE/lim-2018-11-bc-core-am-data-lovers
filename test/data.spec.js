@@ -35,12 +35,31 @@ const inputSort = [{name: 'Bulbasaur'}, {name: 'Venusaur'}, {name: 'Ivysaur'}, {
 
 const outputSortAZ = [{name: 'Bulbasaur'}, {name: 'Ivysaur'}, {name: 'Pidgey'}, {name: 'Venusaur'}];
 
+const outputSortZA = [{name: 'Venusaur'}, {name: 'Pidgey'}, {name: 'Ivysaur'}, {name: 'Bulbasaur'}];
+
+const inputEqual = [{name: 'Bulbasaur'}, {name: 'Venusaur'}, {name: 'Venusaur'}, {name: 'Ivysaur'}, {name: 'Pidgey'}];
+const outputEqual = [{name: 'Bulbasaur'}, {name: 'Ivysaur'}, {name: 'Pidgey'}, {name: 'Venusaur'}, {name: 'Venusaur'}];
+const outputEqualZA = [{name: 'Venusaur'}, {name: 'Venusaur'}, {name: 'Pidgey'}, {name: 'Ivysaur'}, {name: 'Bulbasaur'}];
+
+const orden = 'Az';
+
+const orden1 = 'Za';
+
 describe('pokemon.ordenarPorNombre', () => {
   it('ordenar por nombre deberia ser una funcion', () => {
     expect(typeof window.pokemon.ordenarPorNombre).toBe('function');
   });
   it('ordena de la A-Z', () => {
-    expect(window.pokemon.ordenarPorNombre(inputSort)).toEqual(outputSortAZ);
+    expect(window.pokemon.ordenarPorNombre(inputSort, orden)).toEqual(outputSortAZ);
+  });
+  it('ordena de la Z-A', () => {
+    expect(window.pokemon.ordenarPorNombre(inputSort, orden1)).toEqual(outputSortZA);
+  });
+  it('ordenar array iguales de A-Z', () => {
+    expect(window.pokemon.ordenarPorNombre(inputEqual, orden)).toEqual(outputEqual);
+  });
+  it('ordenar array iguales Z-A', () => {
+    expect(window.pokemon.ordenarPorNombre(inputEqual, orden1)).toEqual(outputEqualZA);
   });
 });
 
