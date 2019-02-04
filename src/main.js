@@ -5,6 +5,8 @@ const ordenPokemon = document.getElementById('orden-pokemon');
 
 const tipoPokemon = document.getElementById('tipo-pokemon');
 
+const labelPromedio =  document.getElementById('promedio') 
+
 const arrayPokemon = POKEMON.pokemon;
 
 const arrayMostrado = pokemon.mostrarPokemones(arrayPokemon);
@@ -43,6 +45,25 @@ const ordenarPokemon = () => {
 
 const filtrarTipo = () => {
   const arrayFiltrado = pokemon.filtrarPokemones(arrayPokemon, tipoPokemon.value);
+
+  const promedio = pokemon.mostrarPromedio(arrayFiltrado, arrayFiltrado.length);
+  
+  let label;
+  if (promedio != 0) {
+     label = ` 
+    <label class="label">
+      La media aritmetica (promedio) de los pokemones de tipo ${tipoPokemon.value} es: ${ promedio } kg.               
+    </label>
+    `;
+  } else {
+     label = ` 
+    <label class="label">
+      Seleccionar Tipo de pokemon.               
+    </label>
+    `;
+  }  
+  labelPromedio.innerHTML = label;
+
   crearPlantilla(arrayFiltrado);
 };
 /* eslint-enable no-unused-vars */

@@ -75,3 +75,9 @@ body {
     from {background-color:  rgba(199, 188, 188, 0.952);}
     to {background-color: rgb(31, 31, 71);}
 }
+
+.list{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 50;
+}

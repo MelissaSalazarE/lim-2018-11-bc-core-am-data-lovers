@@ -45,11 +45,27 @@ const filtrarPokemones = (data, tipo) => {
   return arrayFiltrar;
 };
 
-// funcion estadistica //
+// funcion estadistica  nos permia contar cuantos poquemones hay por tipo //
+
+const mostrarPromedio = (informacion) => {
+  let suma = 0;
+  if (informacion.length != 0) {
+    for (let i = 0; i < informacion.length; i++) {
+      let str = informacion[i].weight;
+      let peso = str.split(" ");
+      suma += parseFloat(peso[0]);
+    }
+    return (suma / informacion.length).toFixed(2) 
+  }else
+  {
+    return 0
+  }   
+};
 
 
 window.pokemon = {
   mostrarPokemones,
   ordenarPorNombre,
   filtrarPokemones,
+  mostrarPromedio,
 };
