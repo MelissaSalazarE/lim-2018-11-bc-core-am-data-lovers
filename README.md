@@ -47,7 +47,7 @@ Despues de entrevistar a tres usuarios nos quedamos con una usuario potencial pa
 
 **_PROCESO DE UNA ENTREVISTA_**
 
-![imagen de entrevista](https://i.ibb.co/fxyR9Hq/proceso-de-usuario.png)
+
 <p align="center">
  <img src="https://i.ibb.co/fxyR9Hq/proceso-de-usuario.png">
 </p>
