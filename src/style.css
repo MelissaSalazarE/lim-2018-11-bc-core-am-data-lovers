@@ -61,6 +61,21 @@ body {
     float: left;
     
 }
+
+.list{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 50;
+}
+.logo{
+    width: 400px;
+}
+
+chart_div{
+    align-content: center;
+    border-radius: 30px;
+}
+
 @media (max-width: 750px) {
     .group {
         font-size: 15px;
@@ -74,10 +89,4 @@ body {
 @keyframes mymove {
     from {background-color:  rgba(199, 188, 188, 0.952);}
     to {background-color: rgb(31, 31, 71);}
-}
-
-.list{
-    padding-bottom: 20px;
-    padding-top: 20px;
-    width: 50;
 }

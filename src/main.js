@@ -5,7 +5,9 @@ const ordenPokemon = document.getElementById('orden-pokemon');
 
 const tipoPokemon = document.getElementById('tipo-pokemon');
 
-const labelPromedio =  document.getElementById('promedio') 
+const labelPromedio = document.getElementById('promedio');
+
+const labelPromedioTalla = document.getElementById('promedioTalla');
 
 const arrayPokemon = POKEMON.pokemon;
 
@@ -47,16 +49,18 @@ const filtrarTipo = () => {
   const arrayFiltrado = pokemon.filtrarPokemones(arrayPokemon, tipoPokemon.value);
 
   const promedio = pokemon.mostrarPromedio(arrayFiltrado, arrayFiltrado.length);
-  
+
+  const promedioTalla = pokemon.mostrarPromedioTalla(arrayFiltrado, arrayFiltrado.length);
+
   let label;
-  if (promedio != 0) {
-     label = ` 
+  if (promedio !== 0) {
+    label = ` 
     <label class="label">
-      La media aritmetica (promedio) de los pokemones de tipo ${tipoPokemon.value} es: ${ promedio } kg.               
+      La media aritmetica de los pesos de los pokemones de tipo ${tipoPokemon.value} es: ${ promedio } kg.          
     </label>
     `;
   } else {
-     label = ` 
+    label = ` 
     <label class="label">
       Seleccionar Tipo de pokemon.               
     </label>
@@ -64,6 +68,25 @@ const filtrarTipo = () => {
   }  
   labelPromedio.innerHTML = label;
 
+  let label1;
+  if (promedioTalla !== 0) {
+    label1 = ` 
+    <label class="labe1">
+      La media aritmetica de las tallas de los pokemones de tipo ${tipoPokemon.value} es: ${ promedioTalla } m.              
+    </label>
+    `;
+  } else {
+    label1 = ` 
+    <label class="label1">
+      Seleccionar Tipo de pokemon.               
+    </label>
+    `;
+  }  
+  labelPromedioTalla.innerHTML = label1;
+
+
   crearPlantilla(arrayFiltrado);
 };
 /* eslint-enable no-unused-vars */
+
+// creando el fetch //

@@ -5,8 +5,11 @@
 <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <h1>POKEMON GO </h1>
+    <img class="logo" alt="logo de pokemon go" src="https://vignette.wikia.nocookie.net/es.pokemon/images/1/19/Logo_Pok%C3%A9mon_GO.png/revision/latest?cb=20150910124751" />
+    <h1>¿Que es?</h1> 
+    <p>El juego consiste en buscar y capturar personajes de la saga Pokémon escondidos en ubicaciones del mundo real y luchar con ellos, lo que implica desplazarse físicamente por las calles de la ciudad para progresar. La aplicación comporta un elemento de interacción social, ya que promueve reuniones físicas de los usuarios en distintas ubicaciones de sus poblaciones.</p>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -42,12 +45,15 @@
       
    
     <section>
+
       <h2>LISTA DE TODOS LOS POKEMONES</h2>    
         <div id="container-list" class="container">
         </div>
         <h2>PROMEDIO</h2>
-        <div id="promedio" class="container">
-        </div>
+        <div id="promedio" class="container"></div>
+        <div id="promedioTalla" class="container"></div>
+        
+        <div id="chart_div"></div>
 
     </section>
 
@@ -56,6 +62,7 @@
     <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
+    <script src="chart.js"></script>
 </body>
 
 </html>

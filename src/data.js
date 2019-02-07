@@ -49,23 +49,36 @@ const filtrarPokemones = (data, tipo) => {
 
 const mostrarPromedio = (informacion) => {
   let suma = 0;
-  if (informacion.length != 0) {
+  if (informacion.length !== 0) {
     for (let i = 0; i < informacion.length; i++) {
       let str = informacion[i].weight;
-      let peso = str.split(" ");
+      let peso = str.split(' ');
       suma += parseFloat(peso[0]);
     }
-    return (suma / informacion.length).toFixed(2) 
-  }else
-  {
-    return 0
+    return (suma / informacion.length).toFixed(2);
+  } else {
+    return 0;
   }   
 };
 
+const mostrarPromedioTalla = (informacion) => {
+  let sumatalla = 0;
+  if (informacion.length !== 0) {
+    for (let i = 0; i < informacion.length; i++) {
+      let str = informacion[i].height;
+      let peso = str.split(' ');
+      sumatalla += parseFloat(peso[0]);
+    }
+    return (sumatalla / informacion.length).toFixed(2);
+  } else {
+    return 0;
+  }   
+};
 
 window.pokemon = {
   mostrarPokemones,
   ordenarPorNombre,
   filtrarPokemones,
   mostrarPromedio,
+  mostrarPromedioTalla,
 };
